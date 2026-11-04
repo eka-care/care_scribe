@@ -15,6 +15,8 @@ from care.emr.models.medication_statement import MedicationStatement
 from care.security.permissions.encounter import EncounterPermissions
 from care.utils.tests.base import CareAPITestBase
 
+from care_scribe.fhir import request as fhir
+from care_scribe.fhir.lookups import bundle_lookups
 from care_scribe.models import ScribeDocument
 
 BUNDLE = json.loads(
@@ -92,6 +94,18 @@ class ScribeFhirIngestTests(CareAPITestBase):
                 rows = model.objects.filter(encounter=self.encounter, **filters)
                 self.assertEqual(rows.count(), count)
         self.assertEqual(resp.data["skipped_resources"], [])
+
+    def test_every_terminology_search_is_prefetched_once(self, _search):
+        note = fhir_note()
+        expected = bundle_lookups(fhir.Request.model_validate(note).bundle)
+
+        self.client.post(self.url, note, format="json")
+
+        searched = [
+            (slug, text) for _, slug, text in (c.args for c in _search.call_args_list)
+        ]
+        self.assertEqual(set(searched), expected)
+        self.assertEqual(len(searched), len(expected))
 
     def test_scribe_codes_are_kept_and_text_is_the_fallback(self, _search):
         self.client.post(self.url, fhir_note(), format="json")

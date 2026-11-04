@@ -6,8 +6,10 @@ from django.utils.timezone import is_aware, make_aware
 from pydantic import ValidationError
 
 from care_scribe.fhir import conditions, medications, notes, observations, orders
+from care_scribe.fhir.lookups import bundle_lookups
 from care_scribe.fhir.request import Request
 from care_scribe.ingest import questionnaire_response
+from care_scribe.ingest.coding import prefetched_codes
 from care_scribe.ingest.context import Context
 from care_scribe.ingest.filing import find_filed_result, record_filing
 
@@ -45,7 +47,7 @@ def ingest_fhir_bundle(
     if not is_aware(published_at):
         published_at = make_aware(published_at)
     ctx = Context(encounter=encounter, user=user, recorded_at=published_at)
-    with transaction.atomic():
+    with prefetched_codes(bundle_lookups(bundle)), transaction.atomic():
         for index, entry in enumerate(bundle.entry):
             resource_type = entry.resource.get("resourceType", "")
             try:
