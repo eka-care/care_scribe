@@ -13,25 +13,19 @@ from care_scribe.ingest import (
     service_requests,
 )
 from care_scribe.ingest.context import Context
+from care_scribe.ingest.filing import find_filed_result, record_filing
 from care_scribe.ingest.request import Request, Section, SectionKind
-from care_scribe.models import ScribeDocument
 
 CHIEF_COMPLAINT = "chief_complaint"
 CURRENT_MEDICATIONS = "current_medications_treatment"
-
-
-class DocumentInOtherEncounterError(Exception):
-    pass
 
 
 def ingest_scribe_document(
     encounter: Encounter, user: User, req: Request
 ) -> tuple[dict, bool]:
     """Writes the note's sections as clinical records once per document; returns (result, created)."""
-    if existing := ScribeDocument.objects.filter(document_id=req.document_id).first():
-        if existing.encounter_id != encounter.id:
-            raise DocumentInOtherEncounterError
-        return existing.result, False
+    if (filed := find_filed_result(req.document_id, encounter)) is not None:
+        return filed, False
 
     published_at = datetime.fromtimestamp(req.published_at, tz=UTC)
     ctx = Context(encounter=encounter, user=user, recorded_at=published_at)
@@ -47,14 +41,13 @@ def ingest_scribe_document(
         "created": ctx.created,
         "skipped_sections": ctx.skipped,
     }
-    ScribeDocument.objects.create(
+    record_filing(
+        ctx,
         document_id=req.document_id,
         session_id=req.session_id,
-        encounter=encounter,
         published_at=published_at,
         payload=req.model_dump(mode="json"),
         result=result,
-        created_by=user,
     )
     return result, True
 

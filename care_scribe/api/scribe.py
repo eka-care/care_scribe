@@ -7,10 +7,8 @@ from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
 
 from care_scribe.ingest import request as scribe
-from care_scribe.ingest.service import (
-    DocumentInOtherEncounterError,
-    ingest_scribe_document,
-)
+from care_scribe.ingest.filing import DocumentInOtherEncounterError
+from care_scribe.ingest.service import ingest_scribe_document
 
 
 class ScribeViewSet(viewsets.ViewSet):

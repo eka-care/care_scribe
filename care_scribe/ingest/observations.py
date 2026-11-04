@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from care.emr.models.observation import Observation
 
 from care_scribe.ingest.coding import (
@@ -16,6 +18,7 @@ VITAL_SIGNS = {
     "display": "Vital Signs",
 }
 EXAM = {"system": CATEGORY_SYSTEM, "code": "exam", "display": "Exam"}
+LABORATORY = {"system": CATEGORY_SYSTEM, "code": "laboratory", "display": "Laboratory"}
 
 
 def create_vitals(ctx: Context, section: Section) -> None:
@@ -50,7 +53,14 @@ def create_exam_findings(ctx: Context, section: Section) -> None:
 
 
 def create_observation(
-    ctx: Context, *, category: dict, code: dict, value_type: str, value: dict, note: str
+    ctx: Context,
+    *,
+    category: dict,
+    code: dict,
+    value_type: str,
+    value: dict,
+    note: str,
+    effective_datetime: datetime | None = None,
 ) -> None:
     observation = Observation.objects.create(
         **ctx.scope,
@@ -60,7 +70,7 @@ def create_observation(
         main_code=code,
         subject_type="encounter",
         subject_id=ctx.encounter.external_id,
-        effective_datetime=ctx.recorded_at,
+        effective_datetime=effective_datetime or ctx.recorded_at,
         data_entered_by=ctx.user,
         value_type=value_type,
         value=value,

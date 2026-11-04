@@ -10,7 +10,10 @@ VERIFICATION_STATUSES = {"unconfirmed", "provisional", "differential", "confirme
 def create_symptoms(ctx: Context, section: Section) -> None:
     for item in ListPayload.model_validate(section.payload).items:
         create_condition(
-            ctx, text=item, category="problem_list_item", verification="confirmed"
+            ctx,
+            code=code_from_text(CONDITION_VALUESET, item),
+            category="problem_list_item",
+            verification="confirmed",
         )
 
 
@@ -19,7 +22,7 @@ def create_diagnoses(ctx: Context, section: Section) -> None:
         status = row.get("status", "").lower()
         create_condition(
             ctx,
-            text=row["diagnosis"],
+            code=code_from_text(CONDITION_VALUESET, row["diagnosis"]),
             category="encounter_diagnosis",
             verification=status if status in VERIFICATION_STATUSES else "unconfirmed",
             since=row.get("since"),
@@ -30,18 +33,19 @@ def create_diagnoses(ctx: Context, section: Section) -> None:
 def create_condition(
     ctx: Context,
     *,
-    text: str,
+    code: dict,
     category: str,
     verification: str,
+    clinical_status: str = "active",
     since: str | None = None,
     note: str | None = None,
 ) -> None:
     condition = Condition.objects.create(
         **ctx.scope,
         **ctx.audit,
-        code=code_from_text(CONDITION_VALUESET, text),
+        code=code,
         category=category,
-        clinical_status="active",
+        clinical_status=clinical_status,
         verification_status=verification,
         onset={"onset_string": since} if since else {},
         recorded_date=ctx.recorded_at,

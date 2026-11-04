@@ -9,17 +9,35 @@ from care_scribe.ingest.text import row_text
 def create_investigations(ctx: Context, section: Section) -> None:
     table = TablePayload.model_validate(section.payload)
     for row in table.rows:
-        service_request = ServiceRequest.objects.create(
-            **ctx.scope,
-            **ctx.audit,
-            facility=ctx.encounter.facility,
+        create_service_request(
+            ctx,
             title=row["investigation"],
             code=code_from_text(PROCEDURE_VALUESET, row["investigation"]),
             category="laboratory",
-            status="active",
-            intent="order",
-            priority="routine",
             note=row_text(table, row, skip=("investigation",)) or None,
-            requester=ctx.user,
         )
-        ctx.add_created("service_request", service_request)
+
+
+def create_service_request(
+    ctx: Context,
+    *,
+    title: str,
+    code: dict,
+    category: str,
+    note: str | None,
+    intent: str = "order",
+) -> None:
+    service_request = ServiceRequest.objects.create(
+        **ctx.scope,
+        **ctx.audit,
+        facility=ctx.encounter.facility,
+        title=title,
+        code=code,
+        category=category,
+        status="active",
+        intent=intent,
+        priority="routine",
+        note=note,
+        requester=ctx.user,
+    )
+    ctx.add_created("service_request", service_request)
