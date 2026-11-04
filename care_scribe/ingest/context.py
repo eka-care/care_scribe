@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from datetime import datetime
+from uuid import UUID
 
 from care.emr.models.encounter import Encounter
+from care.emr.models.medication_request import MedicationRequestPrescription
 from care.users.models import User
 
 
@@ -10,6 +12,8 @@ class Context:
     encounter: Encounter
     user: User
     recorded_at: datetime
+    document_id: UUID
+    prescription: MedicationRequestPrescription | None = None
     created: dict[str, list[str]] = field(default_factory=dict)
     notes: dict[str, list[str]] = field(default_factory=dict)
     skipped: list[str] = field(default_factory=list)

@@ -11,6 +11,7 @@ from care.emr.models import (
     QuestionnaireResponse,
     ServiceRequest,
 )
+from care.emr.models.medication_request import MedicationRequestPrescription
 from care.emr.models.medication_statement import MedicationStatement
 from care.security.permissions.encounter import EncounterPermissions
 from care.utils.tests.base import CareAPITestBase
@@ -106,6 +107,21 @@ class ScribeFhirIngestTests(CareAPITestBase):
         ]
         self.assertEqual(set(searched), expected)
         self.assertEqual(len(searched), len(expected))
+
+    def test_prescribed_medicines_share_one_prescription(self, _search):
+        note = fhir_note()
+
+        self.client.post(self.url, note, format="json")
+
+        prescription = MedicationRequestPrescription.objects.get(
+            encounter=self.encounter
+        )
+        self.assertEqual(
+            prescription.alternate_identifier, note["bundle"]["identifier"]["value"]
+        )
+        self.assertEqual(
+            MedicationRequest.objects.filter(prescription=prescription).count(), 7
+        )
 
     def test_scribe_codes_are_kept_and_text_is_the_fallback(self, _search):
         self.client.post(self.url, fhir_note(), format="json")

@@ -46,7 +46,12 @@ def ingest_fhir_bundle(
     published_at = bundle.timestamp or care_now()
     if not is_aware(published_at):
         published_at = make_aware(published_at)
-    ctx = Context(encounter=encounter, user=user, recorded_at=published_at)
+    ctx = Context(
+        encounter=encounter,
+        user=user,
+        recorded_at=published_at,
+        document_id=bundle.document_id,
+    )
     with prefetched_codes(bundle_lookups(bundle)), transaction.atomic():
         for index, entry in enumerate(bundle.entry):
             resource_type = entry.resource.get("resourceType", "")

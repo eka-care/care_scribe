@@ -28,7 +28,12 @@ def ingest_scribe_document(
         return filed, False
 
     published_at = datetime.fromtimestamp(req.published_at, tz=UTC)
-    ctx = Context(encounter=encounter, user=user, recorded_at=published_at)
+    ctx = Context(
+        encounter=encounter,
+        user=user,
+        recorded_at=published_at,
+        document_id=req.document_id,
+    )
     for section in sorted(req.sections, key=lambda s: s.order):
         if not section.is_ready:
             ctx.skipped.append(section.key)

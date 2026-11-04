@@ -12,6 +12,7 @@ from care.emr.models import (
     QuestionnaireResponse,
     ServiceRequest,
 )
+from care.emr.models.medication_request import MedicationRequestPrescription
 from care.emr.models.medication_statement import MedicationStatement
 from care.security.permissions.encounter import EncounterPermissions
 from care.utils.tests.base import CareAPITestBase
@@ -112,6 +113,46 @@ class ScribeIngestTests(CareAPITestBase):
         self.assertEqual(
             request.dosage_instruction[0]["text"], "1 capsule, twice daily, 5 days"
         )
+
+    def test_prescribed_medicines_are_grouped_into_one_prescription(self, _search):
+        cases = [
+            ("note with prescribed medicines", SCRIBE_NOTE, 1),
+            (
+                "note without prescribed medicines",
+                scribe_note(
+                    document_id="0b6a3c55-7f0e-4c1d-9a2e-3d5f6b7c8d91",
+                    sections=[
+                        s
+                        for s in SCRIBE_NOTE["sections"]
+                        if s["key"] != "treatment_plan_meds"
+                    ],
+                ),
+                0,
+            ),
+        ]
+        for name, note, count in cases:
+            with self.subTest(name):
+                MedicationRequestPrescription.objects.all().delete()
+                self.client.post(self.url, note, format="json")
+
+                prescriptions = MedicationRequestPrescription.objects.filter(
+                    encounter=self.encounter
+                )
+                self.assertEqual(prescriptions.count(), count)
+                for prescription in prescriptions:
+                    self.assertEqual(
+                        prescription.alternate_identifier, note["document_id"]
+                    )
+                    self.assertEqual(prescription.prescribed_by, self.user)
+                    self.assertEqual(prescription.status, "active")
+                    self.assertEqual(
+                        set(
+                            MedicationRequest.objects.values_list(
+                                "prescription", flat=True
+                            )
+                        ),
+                        {prescription.id},
+                    )
 
     def test_unstructured_sections_become_questionnaire_answers(self, _search):
         self.client.post(self.url, SCRIBE_NOTE, format="json")

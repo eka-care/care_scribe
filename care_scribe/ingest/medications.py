@@ -1,4 +1,7 @@
-from care.emr.models.medication_request import MedicationRequest
+from care.emr.models.medication_request import (
+    MedicationRequest,
+    MedicationRequestPrescription,
+)
 from care.emr.models.medication_statement import MedicationStatement
 
 from care_scribe.ingest.coding import MEDICATION_VALUESET, code_from_text
@@ -73,8 +76,24 @@ def create_request(
         note=note,
         authored_on=ctx.recorded_at,
         requester=ctx.user,
+        prescription=note_prescription(ctx),
     )
     ctx.add_created("medication_request", request)
+
+
+def note_prescription(ctx: Context) -> MedicationRequestPrescription:
+    """The one prescription that groups this note's medicines, created with the first of them."""
+    if ctx.prescription is None:
+        ctx.prescription = MedicationRequestPrescription.objects.create(
+            **ctx.scope,
+            **ctx.audit,
+            status="active",
+            name="Scribe note",
+            alternate_identifier=str(ctx.document_id),
+            prescribed_by=ctx.user,
+        )
+        ctx.add_created("medication_request_prescription", ctx.prescription)
+    return ctx.prescription
 
 
 def dosage_text(row: dict[str, str]) -> str:
