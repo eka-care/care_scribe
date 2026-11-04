@@ -1,0 +1,420 @@
+{
+  "sections": [
+    {
+      "key": "chief_complaint",
+      "display_name": "Chief Complaint",
+      "kind": "LIST",
+      "payload": {
+        "items": [
+          "Burning sensation while passing urine for three days"
+        ]
+      },
+      "order": 0,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "history_of_present_illness",
+      "display_name": "History of Present Illness",
+      "kind": "NARRATIVE",
+      "payload": {
+        "markdown": "Burning during urination for three days with increased urgency. No fever, vomiting or flank pain reported."
+      },
+      "order": 1,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "past_medical_history",
+      "display_name": "Past Medical History",
+      "kind": "PATIENT_MEDICAL_HISTORY",
+      "payload": {
+        "headers": [
+          {
+            "key": "condition",
+            "label": "Condition",
+            "type": "text"
+          },
+          {
+            "key": "category",
+            "label": "Category",
+            "type": "text"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "type": "text"
+          },
+          {
+            "key": "since",
+            "label": "Since",
+            "type": "text"
+          },
+          {
+            "key": "note",
+            "label": "Note",
+            "type": "text"
+          }
+        ],
+        "rows": [
+          {
+            "condition": "Asthma",
+            "category": "condition",
+            "status": "yes",
+            "since": "10 years"
+          },
+          {
+            "condition": "Hypothyroidism",
+            "category": "condition",
+            "status": "yes",
+            "since": "2 years"
+          },
+          {
+            "condition": "Dust",
+            "category": "other_allergy",
+            "status": "yes"
+          },
+          {
+            "condition": "Tobacco chewing",
+            "category": "lifestyle_habit",
+            "status": "yes"
+          },
+          {
+            "condition": "Coffee",
+            "category": "lifestyle_habit",
+            "status": "yes",
+            "note": "Three cups a day"
+          }
+        ]
+      },
+      "order": 2,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "current_medications_treatment",
+      "display_name": "Current Medications / Treatment",
+      "kind": "MEDICATION_TABLE",
+      "payload": {
+        "headers": [
+          {
+            "key": "drug_name",
+            "label": "Medicine",
+            "type": "text"
+          },
+          {
+            "key": "dosage",
+            "label": "Dosage",
+            "type": "text"
+          },
+          {
+            "key": "frequency",
+            "label": "Frequency",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "notes",
+            "label": "Instructions",
+            "type": "text"
+          }
+        ],
+        "rows": [
+          {
+            "drug_name": "Levothyroxine 50 mcg",
+            "dosage": "1 tablet",
+            "frequency": "once daily",
+            "notes": "before breakfast"
+          }
+        ]
+      },
+      "order": 3,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "vital_signs",
+      "display_name": "Vital Signs",
+      "kind": "VITAL_TABLE",
+      "payload": {
+        "headers": [
+          {
+            "key": "vital_name",
+            "label": "Vital Sign",
+            "type": "text"
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "text"
+          },
+          {
+            "key": "unit",
+            "label": "Unit",
+            "type": "text"
+          },
+          {
+            "key": "normal_range",
+            "label": "Normal Range",
+            "type": "text"
+          },
+          {
+            "key": "notes",
+            "label": "Notes",
+            "type": "markdown"
+          }
+        ],
+        "rows": [
+          {
+            "vital_name": "Temperature",
+            "value": "99.4",
+            "unit": "°F"
+          }
+        ]
+      },
+      "order": 4,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "physical_examination",
+      "display_name": "Physical Examination",
+      "kind": "EXAMINATION_FINDINGS",
+      "payload": {
+        "headers": [
+          {
+            "key": "finding",
+            "label": "Finding",
+            "type": "text"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "type": "text"
+          },
+          {
+            "key": "detail",
+            "label": "Detail",
+            "type": "text"
+          }
+        ],
+        "rows": [
+          {
+            "finding": "Suprapubic tenderness",
+            "status": "present",
+            "detail": "mild"
+          },
+          {
+            "finding": "Flank tenderness",
+            "status": "absent"
+          },
+          {
+            "finding": "Pallor",
+            "status": "absent"
+          }
+        ]
+      },
+      "order": 5,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "assessment",
+      "display_name": "Assessment",
+      "kind": "DIAGNOSIS",
+      "payload": {
+        "headers": [
+          {
+            "key": "diagnosis",
+            "label": "Diagnosis",
+            "type": "text"
+          },
+          {
+            "key": "since",
+            "label": "Since",
+            "type": "text"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "type": "text"
+          },
+          {
+            "key": "note",
+            "label": "Note",
+            "type": "text"
+          }
+        ],
+        "rows": [
+          {
+            "diagnosis": "Cystitis",
+            "since": "3 days",
+            "status": "provisional",
+            "note": "Likely"
+          }
+        ]
+      },
+      "order": 6,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "treatment_plan_meds",
+      "display_name": "Treatment Plan",
+      "kind": "MEDICATION_TABLE",
+      "payload": {
+        "headers": [
+          {
+            "key": "drug_name",
+            "label": "Medicine",
+            "type": "text"
+          },
+          {
+            "key": "dosage",
+            "label": "Dosage",
+            "type": "text"
+          },
+          {
+            "key": "frequency",
+            "label": "Frequency",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "notes",
+            "label": "Instructions",
+            "type": "text"
+          }
+        ],
+        "rows": [
+          {
+            "drug_name": "Nitrofurantoin 100 mg",
+            "dosage": "1 capsule",
+            "frequency": "twice daily",
+            "duration": "5 days"
+          }
+        ]
+      },
+      "order": 7,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "treatment_plan_investigations",
+      "display_name": "Treatment Plan - Investigations",
+      "kind": "LAB_INVESTIGATIONS",
+      "payload": {
+        "headers": [
+          {
+            "key": "investigation",
+            "label": "Investigation",
+            "type": "text"
+          },
+          {
+            "key": "test_on",
+            "label": "Test On",
+            "type": "text"
+          },
+          {
+            "key": "repeat_on",
+            "label": "Repeat On",
+            "type": "text"
+          },
+          {
+            "key": "remarks",
+            "label": "Remarks",
+            "type": "text"
+          }
+        ],
+        "rows": [
+          {
+            "investigation": "Urine routine examination",
+            "test_on": "Today"
+          },
+          {
+            "investigation": "Complete blood count",
+            "test_on": "Today"
+          }
+        ]
+      },
+      "order": 8,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "advices",
+      "display_name": "Advices",
+      "kind": "LIST",
+      "payload": {
+        "items": [
+          "Drink plenty of water",
+          "Avoid holding urine",
+          "Complete the full course of medicine"
+        ]
+      },
+      "order": 9,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    },
+    {
+      "key": "follow_up_instructions",
+      "display_name": "Follow-up Instructions",
+      "kind": "KEY_VALUE",
+      "payload": {
+        "items": [
+          {
+            "key": "Follow-up Date",
+            "value": "After 1 week"
+          }
+        ]
+      },
+      "order": 10,
+      "status": {
+        "state": "ready",
+        "error": null
+      },
+      "edited_by_user": false
+    }
+  ],
+  "session_id": "sc-00000000000000000000000000000001",
+  "document_id": "0b6a3c55-7f0e-4c1d-9a2e-3d5f6b7c8d90",
+  "published_at": 1793795836
+}

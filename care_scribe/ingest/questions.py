@@ -1,0 +1,9 @@
+QUESTIONNAIRE_SLUG = "scribe-note"
+
+HISTORY_OF_PRESENT_ILLNESS = "history_of_present_illness"
+MEDICAL_HISTORY = "medical_history"
+ADVICES = "advices"
+FOLLOW_UP_INSTRUCTIONS = "follow_up_instructions"
+OTHER = "other"
+
+SECTION_QUESTIONS = {HISTORY_OF_PRESENT_ILLNESS, ADVICES, FOLLOW_UP_INSTRUCTIONS}
