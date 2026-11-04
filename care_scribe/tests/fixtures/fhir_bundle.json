@@ -1,0 +1,4321 @@
+{
+ "resourceType": "Bundle",
+ "id": "00000000-0000-4000-8000-000000000001",
+ "type": "collection",
+ "timestamp": "2026-11-04T15:19:50.750967Z",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+    "identifier": [
+     {
+      "type": {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+         "code": "MR",
+         "display": "MR"
+        }
+       ]
+      },
+      "value": "enc-0000-sample"
+     }
+    ],
+    "name": [
+     {
+      "text": "Test Patient",
+      "family": "Patient",
+      "given": [
+       "Test"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "00000 00000",
+      "use": "mobile"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1970-01-01"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:07e29017-2606-4c12-9311-66373c7b007c",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "07e29017-2606-4c12-9311-66373c7b007c",
+    "status": "finished",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/encounter-type",
+        "code": "first-visit",
+        "display": "First visit"
+       }
+      ],
+      "text": "First visit"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "actualPeriod": {
+     "start": "2026-09-18"
+    },
+    "participant": [
+     {
+      "actor": {
+       "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+       "display": "Dr. Sample"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:4d390cfc-c137-457f-baa1-f4ae8b5aba4a",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "4d390cfc-c137-457f-baa1-f4ae8b5aba4a",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "symptom",
+        "display": "Symptom"
+       }
+      ],
+      "text": "symptom"
+     }
+    ],
+    "code": {
+     "text": "Central chest heaviness on exertion for ~2 weeks"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e9f42de1-206b-4d23-8e83-d81499675204",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e9f42de1-206b-4d23-8e83-d81499675204",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "symptom",
+        "display": "Symptom"
+       }
+      ],
+      "text": "symptom"
+     }
+    ],
+    "code": {
+     "text": "Exertional breathlessness"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:483471b1-c959-4ceb-a7b9-29293e40fb97",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "483471b1-c959-4ceb-a7b9-29293e40fb97",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Smoking"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "Inactive",
+    "note": [
+     {
+      "text": "Since: quit 2021; Ex-smoker: 10–15 cigarettes/day for ~20 years"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8e18c2db-4c24-4855-a91a-7e0c8f07f161",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "8e18c2db-4c24-4855-a91a-7e0c8f07f161",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Alcohol"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "Active",
+    "note": [
+     {
+      "text": "Occasional, 2–3 drinks about once a month"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:74d4cf1b-9185-4137-a9a4-3a6ba80631d2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "74d4cf1b-9185-4137-a9a4-3a6ba80631d2",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Tobacco chewing / gutka"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "Inactive"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f224f44b-e07c-4dfc-ae97-511886f5243d",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f224f44b-e07c-4dfc-ae97-511886f5243d",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Occupation"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "accountant in a private firm; sedentary, ~10 hours/day, high work stress this quarter"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8db61647-12c5-4486-8d73-018884119d2d",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "8db61647-12c5-4486-8d73-018884119d2d",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Living situation"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "lives with wife and two children in Bangalore"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:698ea40b-e96a-4c33-89d0-fb96debac2b4",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "698ea40b-e96a-4c33-89d0-fb96debac2b4",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Tobacco"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "ex-smoker, 10–15 cigarettes/day for ~20 years, quit 2021; no chewing tobacco/gutka"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:34aa5fb5-1ba8-4a6b-abee-04f1c8fb064d",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "34aa5fb5-1ba8-4a6b-abee-04f1c8fb064d",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Alcohol"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "occasional, 2–3 drinks at parties about once a month"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:670a1319-534c-4feb-a325-bd942d8a6c67",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "670a1319-534c-4feb-a325-bd942d8a6c67",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Substance use"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "none reported"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5eebec54-5218-4a11-9d80-c3ee2f130636",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5eebec54-5218-4a11-9d80-c3ee2f130636",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Diet"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "non-vegetarian, rice-based, outside food 3–4 times a week"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:b09c64b6-d6fe-440e-a67c-31b395cd9f14",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "b09c64b6-d6fe-440e-a67c-31b395cd9f14",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Exercise"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "none; stopped morning walks during COVID"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e25672a3-4ee7-4f05-a713-e87c25a16825",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e25672a3-4ee7-4f05-a713-e87c25a16825",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "social-history",
+        "display": "Social History"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Delhi, 4 days last month (official work)"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9e2f3948-ab85-43c5-8983-fa35d2fbc7e4",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9e2f3948-ab85-43c5-8983-fa35d2fbc7e4",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Temperature"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueQuantity": {
+     "value": 98.4,
+     "unit": "°F",
+     "system": "http://unitsofmeasure.org",
+     "code": "°F"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ac1fbf3d-b2db-4d38-8791-d7cc7825968a",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "ac1fbf3d-b2db-4d38-8791-d7cc7825968a",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Pulse"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueQuantity": {
+     "value": 88.0,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Regular"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:b11587e3-0b42-4072-a71d-a89253aa9137",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "b11587e3-0b42-4072-a71d-a89253aa9137",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Blood pressure"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "150/94 mmHg",
+    "note": [
+     {
+      "text": "Right arm, sitting"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:4675a1fd-d2cd-420d-a71c-0a4ade1e1440",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "4675a1fd-d2cd-420d-a71c-0a4ade1e1440",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Respiratory rate"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueQuantity": {
+     "value": 18.0,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f740a352-94de-420d-ae52-fc01597921f5",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f740a352-94de-420d-ae52-fc01597921f5",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "SpO2"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueQuantity": {
+     "value": 97.0,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Room air"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f0762665-91f8-4b35-888c-d8fb51db7c67",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f0762665-91f8-4b35-888c-d8fb51db7c67",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Weight"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueQuantity": {
+     "value": 84.0,
+     "unit": "kg",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:3aa9145f-a49f-4fe9-bad7-4ccadde50368",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "3aa9145f-a49f-4fe9-bad7-4ccadde50368",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Height"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueQuantity": {
+     "value": 168.0,
+     "unit": "cm",
+     "system": "http://unitsofmeasure.org",
+     "code": "cm"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:bb419ae5-763d-49bf-a3d6-90ee534cbacc",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "bb419ae5-763d-49bf-a3d6-90ee534cbacc",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "BMI"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueQuantity": {
+     "value": 29.8,
+     "unit": "kg/m²",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg/m²"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f654240d-905d-424a-90f8-be826b9640ae",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f654240d-905d-424a-90f8-be826b9640ae",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Pain score"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueQuantity": {
+     "value": 0.0,
+     "unit": "/10",
+     "system": "http://unitsofmeasure.org",
+     "code": "/10"
+    },
+    "note": [
+     {
+      "text": "At rest"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:eb69ab66-c91a-47bc-8d02-9aaee0812ee4",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "eb69ab66-c91a-47bc-8d02-9aaee0812ee4",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "General condition"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "normal",
+    "note": [
+     {
+      "text": "Comfortable at rest; System: General"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5901545c-8f24-4b70-a5e2-695b9646ffb6",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5901545c-8f24-4b70-a5e2-695b9646ffb6",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Pallor"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "absent",
+    "note": [
+     {
+      "text": "System: General"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ab00edd3-449d-493f-9780-0e0f9490c037",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "ab00edd3-449d-493f-9780-0e0f9490c037",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Icterus"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "absent",
+    "note": [
+     {
+      "text": "System: General"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:4bb4957e-6900-417c-acd7-36534fc80e8e",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "4bb4957e-6900-417c-acd7-36534fc80e8e",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Cyanosis"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "absent",
+    "note": [
+     {
+      "text": "System: General"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d117d1b6-4ff8-445c-bd79-d14e0ac698f4",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d117d1b6-4ff8-445c-bd79-d14e0ac698f4",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Clubbing"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "absent",
+    "note": [
+     {
+      "text": "System: General"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:4d3960ef-50db-4f6c-853a-51fa86751de6",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "4d3960ef-50db-4f6c-853a-51fa86751de6",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Pedal edema"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "absent",
+    "note": [
+     {
+      "text": "System: General"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d7666e5d-a38b-40e8-872b-9ae16fa410c7",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d7666e5d-a38b-40e8-872b-9ae16fa410c7",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "JVP"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "normal",
+    "note": [
+     {
+      "text": "Not raised; System: CVS"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e4b6d0ef-1e3f-4b09-b82b-3f0e84e95544",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e4b6d0ef-1e3f-4b09-b82b-3f0e84e95544",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Carotid bruit"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "absent",
+    "note": [
+     {
+      "text": "System: CVS"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:bcd376ab-8b93-44a2-a32c-7986a6a8339c",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "bcd376ab-8b93-44a2-a32c-7986a6a8339c",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Heart sounds"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "normal",
+    "note": [
+     {
+      "text": "S1 S2 normal, no murmur, no added sounds; System: CVS"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e6e69525-a78a-4e50-8752-3e857cb71e9d",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e6e69525-a78a-4e50-8752-3e857cb71e9d",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Breath sounds"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "normal",
+    "note": [
+     {
+      "text": "Equal air entry bilaterally; no crepitations, no wheeze; System: RS"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:93bed50d-e6f6-47bd-9684-c16ced5e5084",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "93bed50d-e6f6-47bd-9684-c16ced5e5084",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Abdomen"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "normal",
+    "note": [
+     {
+      "text": "Soft, non-tender, no organomegaly; healed appendicectomy scar; System: Abdomen"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:b3891c1a-4673-4cf6-8cbb-3cbc5367e12c",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "b3891c1a-4673-4cf6-8cbb-3cbc5367e12c",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Peripheral pulses"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "present",
+    "note": [
+     {
+      "text": "Well felt in both feet; System: CVS"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a58b1ba8-94cf-42cf-b4bb-3fc39cdbdb69",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "a58b1ba8-94cf-42cf-b4bb-3fc39cdbdb69",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Calf tenderness"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "absent",
+    "note": [
+     {
+      "text": "System: Lower limb"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8f0e844f-f0d8-4595-a3e6-58cad602cc4f",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "8f0e844f-f0d8-4595-a3e6-58cad602cc4f",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "exam",
+        "display": "Exam"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Focal neurological deficit"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueString": "absent",
+    "note": [
+     {
+      "text": "System: CNS"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:2ed9a2e7-200f-444d-93db-dad8a4d7091e",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "2ed9a2e7-200f-444d-93db-dad8a4d7091e",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Fasting blood sugar"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueQuantity": {
+     "value": 142.0,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "interpretation": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "H",
+        "display": "High"
+       }
+      ],
+      "text": "High"
+     }
+    ],
+    "note": [
+     {
+      "text": "Reference range: 70–100"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a06f49fe-0863-46d7-8eb3-00e05b7d26d4",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "a06f49fe-0863-46d7-8eb3-00e05b7d26d4",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "HbA1c"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueQuantity": {
+     "value": 7.8,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "interpretation": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "H",
+        "display": "High"
+       }
+      ],
+      "text": "High"
+     }
+    ],
+    "note": [
+     {
+      "text": "Reference range: < 7"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:cfba03d5-2ccf-4a51-92ec-c44874c091a2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "cfba03d5-2ccf-4a51-92ec-c44874c091a2",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Total cholesterol"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueQuantity": {
+     "value": 236.0,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "interpretation": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "H",
+        "display": "High"
+       }
+      ],
+      "text": "High"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:c862e857-8684-4b78-b271-e9e7a4a04b8e",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "c862e857-8684-4b78-b271-e9e7a4a04b8e",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "LDL cholesterol"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueQuantity": {
+     "value": 158.0,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "interpretation": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "H",
+        "display": "High"
+       }
+      ],
+      "text": "High"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f936d870-5b26-4511-90c9-accc87311bd3",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f936d870-5b26-4511-90c9-accc87311bd3",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "HDL cholesterol"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueQuantity": {
+     "value": 34.0,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "interpretation": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "L",
+        "display": "Low"
+       }
+      ],
+      "text": "Low"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9cf097e9-b9ac-42f9-a5d3-df60cd959ff2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9cf097e9-b9ac-42f9-a5d3-df60cd959ff2",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Triglycerides"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueQuantity": {
+     "value": 210.0,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "interpretation": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "H",
+        "display": "High"
+       }
+      ],
+      "text": "High"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e9799d7a-3a81-4113-883a-c052385e6963",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e9799d7a-3a81-4113-883a-c052385e6963",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Serum creatinine"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueQuantity": {
+     "value": 1.0,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d0f99001-dee6-4d4d-ad49-6b1a77683924",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d0f99001-dee6-4d4d-ad49-6b1a77683924",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Haemoglobin"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueQuantity": {
+     "value": 14.2,
+     "unit": "g/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "g/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:cdd71f62-02d7-4cd6-ba2b-2e675863bc08",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "cdd71f62-02d7-4cd6-ba2b-2e675863bc08",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "TSH"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueString": "2.4"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e7c0ff20-2cc2-4aaa-b2b4-305745ed076a",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e7c0ff20-2cc2-4aaa-b2b4-305745ed076a",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Random blood sugar"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "valueQuantity": {
+     "value": 188.0,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "interpretation": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "H",
+        "display": "High"
+       }
+      ],
+      "text": "High"
+     }
+    ],
+    "note": [
+     {
+      "text": "Date: Last week (pharmacy)"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e10685a7-1dd4-4360-8324-277bd9fd3b32",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e10685a7-1dd4-4360-8324-277bd9fd3b32",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "ECG (in clinic today)"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-09-18",
+    "valueString": "Sinus rhythm 86/min; ~1 mm ST depression in V5–V6; no ST elevation, no acute infarct changes",
+    "interpretation": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "A",
+        "display": "Abnormal"
+       }
+      ],
+      "text": "Abnormal"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:92a3ac4a-75d3-4514-996c-ee06e121d394",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "92a3ac4a-75d3-4514-996c-ee06e121d394",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "ECG (office health camp)"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2026-07",
+    "valueString": "Sinus rhythm, no acute changes"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:02acbb63-4532-4b9b-bfec-ef6e5825a5de",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "02acbb63-4532-4b9b-bfec-ef6e5825a5de",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Chest X-ray"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "effectiveDateTime": "2022",
+    "valueString": "Normal"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e7bc31c2-b602-45da-9d8d-1cbd7d82cd95",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "e7bc31c2-b602-45da-9d8d-1cbd7d82cd95",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "problem-list-item",
+        "display": "Problem List Item"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Type 2 diabetes mellitus"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Category: condition; Since: ~7 years; Reports occasionally skipping the tablet"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f891894e-9211-4ec3-8fc9-9816046422e1",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f891894e-9211-4ec3-8fc9-9816046422e1",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "problem-list-item",
+        "display": "Problem List Item"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Hypertension"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Category: condition; Since: ~5 years"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7e555214-e75d-47f1-85f7-d060445cfdf1",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7e555214-e75d-47f1-85f7-d060445cfdf1",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "inactive",
+       "display": "Inactive"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "refuted",
+       "display": "Refuted"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "problem-list-item",
+        "display": "Problem List Item"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Thyroid disorder"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Category: condition; Explicitly denied"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d0c0126e-212d-43e4-a423-d6f0a2c65ad8",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d0c0126e-212d-43e4-a423-d6f0a2c65ad8",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "problem-list-item",
+        "display": "Problem List Item"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Appendicectomy"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "onsetDateTime": "2009",
+    "note": [
+     {
+      "text": "Category: condition; Surgery; scar healed"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:df80e5a8-d317-4355-9ab1-17c4711f110b",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "df80e5a8-d317-4355-9ab1-17c4711f110b",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "problem-list-item",
+        "display": "Problem List Item"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Renal calculus"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "onsetDateTime": "2018",
+    "note": [
+     {
+      "text": "Category: condition; Removed by laser procedure"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ffef7f77-aa33-440e-bff8-c879375caaae",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "ffef7f77-aa33-440e-bff8-c879375caaae",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "problem-list-item",
+        "display": "Problem List Item"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Dengue fever"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "onsetDateTime": "2022",
+    "note": [
+     {
+      "text": "Category: condition; Hospitalised 3 days"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8392881a-ca82-475b-80cf-02d0d9557742",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "8392881a-ca82-475b-80cf-02d0d9557742",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "problem-list-item",
+        "display": "Problem List Item"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Jaundice"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Category: condition; Since: childhood; No recurrence"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5cd0288f-ace4-4d91-957f-f662073fc608",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "5cd0288f-ace4-4d91-957f-f662073fc608",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "inactive",
+       "display": "Inactive"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "refuted",
+       "display": "Refuted"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "problem-list-item",
+        "display": "Problem List Item"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Asthma"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Category: condition; Explicitly denied"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:59191133-b0f4-485e-a71a-e77c4e4991ee",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "59191133-b0f4-485e-a71a-e77c4e4991ee",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "inactive",
+       "display": "Inactive"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "refuted",
+       "display": "Refuted"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "problem-list-item",
+        "display": "Problem List Item"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Tuberculosis"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Category: condition; Explicitly denied"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:c5e7126f-f521-4d93-abc4-e68a0d6df577",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "c5e7126f-f521-4d93-abc4-e68a0d6df577",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "provisional",
+       "display": "Provisional"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Stable angina, exertional"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Since: ~2 weeks; Typical exertional chest heaviness relieved by rest with left-arm radiation; resting ECG shows ~1 mm ST depression V5–V6 without acute changes. High pre-test probability: diabetes, hypertension, dyslipidaemia, 20 pack-year ex-smoker, strong family history. Significant coronary artery disease to be ruled out."
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:1edb32f9-a354-4855-9f6a-3e4a80eb9bfb",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "1edb32f9-a354-4855-9f6a-3e4a80eb9bfb",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed",
+       "display": "Confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Type 2 diabetes mellitus, suboptimally controlled"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Since: ~7 years; HbA1c 7.8%, FBS 142, RBS 188; irregular adherence"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:083da390-885d-4d54-a04e-a6effd6cf668",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "083da390-885d-4d54-a04e-a6effd6cf668",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed",
+       "display": "Confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Hypertension, uncontrolled today"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Since: ~5 years; BP 150/94 mmHg on Telma 40"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:19445942-b71d-4f35-bf42-df4ad6cf450f",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "19445942-b71d-4f35-bf42-df4ad6cf450f",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed",
+       "display": "Confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Dyslipidaemia"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "LDL 158, HDL 34, TG 210"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a3a43960-17fa-487b-9bac-6180204edc64",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "a3a43960-17fa-487b-9bac-6180204edc64",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed",
+       "display": "Confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Obesity"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "BMI 29.8 kg/m²"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:77d66bab-5b09-405d-9c4f-b50e81464713",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "77d66bab-5b09-405d-9c4f-b50e81464713",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active",
+       "display": "Active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "provisional",
+       "display": "Provisional"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "text": "Gastro-oesophageal reflux disease"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Differential for the 'acidity' symptoms; more likely cardiac"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:16ba6082-be48-40a1-b2cf-bf4eb2f018d0",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "16ba6082-be48-40a1-b2cf-bf4eb2f018d0",
+    "status": "active",
+    "intent": "order",
+    "medication": {
+     "concept": {
+      "text": "Tab. Ecosprin 75"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "After food; continue"
+     }
+    ],
+    "dosageInstruction": [
+     {
+      "text": "1 tablet, once daily at night, lifelong",
+      "additionalInstruction": [
+       {
+        "text": "After food; continue"
+       }
+      ],
+      "asNeeded": false,
+      "route": {
+       "coding": [
+        {
+         "system": "http://snomed.info/sct",
+         "code": "26643006",
+         "display": "Oral"
+        }
+       ],
+       "text": "Oral"
+      }
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:20618fa0-5669-4799-9cec-e7d03d4b04f6",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "20618fa0-5669-4799-9cec-e7d03d4b04f6",
+    "status": "active",
+    "intent": "order",
+    "medication": {
+     "concept": {
+      "text": "Tab. Atorvastatin 40mg"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "dosageInstruction": [
+     {
+      "text": "1 tablet, once daily at night, lifelong (for now)",
+      "asNeeded": false,
+      "route": {
+       "coding": [
+        {
+         "system": "http://snomed.info/sct",
+         "code": "26643006",
+         "display": "Oral"
+        }
+       ],
+       "text": "Oral"
+      }
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:649b29c0-d2c2-4398-acdf-27fd36fafc85",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "649b29c0-d2c2-4398-acdf-27fd36fafc85",
+    "status": "active",
+    "intent": "order",
+    "medication": {
+     "concept": {
+      "text": "Tab. Metoprolol XL 25mg"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Dose to be reviewed at follow-up"
+     }
+    ],
+    "dosageInstruction": [
+     {
+      "text": "1 tablet, once daily (morning), 2 weeks, then review",
+      "additionalInstruction": [
+       {
+        "text": "Dose to be reviewed at follow-up"
+       }
+      ],
+      "asNeeded": false,
+      "route": {
+       "coding": [
+        {
+         "system": "http://snomed.info/sct",
+         "code": "26643006",
+         "display": "Oral"
+        }
+       ],
+       "text": "Oral"
+      }
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:3f053c8d-9baf-4d05-a52f-f0946690f6dd",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "3f053c8d-9baf-4d05-a52f-f0946690f6dd",
+    "status": "active",
+    "intent": "order",
+    "medication": {
+     "concept": {
+      "text": "Tab. Telma 40"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "dosageInstruction": [
+     {
+      "text": "1 tablet, once daily (morning), continue",
+      "asNeeded": false,
+      "route": {
+       "coding": [
+        {
+         "system": "http://snomed.info/sct",
+         "code": "26643006",
+         "display": "Oral"
+        }
+       ],
+       "text": "Oral"
+      }
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5591f5ba-938f-4ff0-a2cd-590a3e445f01",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "5591f5ba-938f-4ff0-a2cd-590a3e445f01",
+    "status": "active",
+    "intent": "order",
+    "medication": {
+     "concept": {
+      "text": "Tab. Metformin 1000mg"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "After food; dose increased from 500 mg"
+     }
+    ],
+    "dosageInstruction": [
+     {
+      "text": "1 tablet, twice daily, continue",
+      "additionalInstruction": [
+       {
+        "text": "After food; dose increased from 500 mg"
+       }
+      ],
+      "asNeeded": false,
+      "route": {
+       "coding": [
+        {
+         "system": "http://snomed.info/sct",
+         "code": "26643006",
+         "display": "Oral"
+        }
+       ],
+       "text": "Oral"
+      }
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:fa6fba00-88e7-40b9-9877-e987a18e62c1",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "fa6fba00-88e7-40b9-9877-e987a18e62c1",
+    "status": "active",
+    "intent": "order",
+    "medication": {
+     "concept": {
+      "text": "Tab. Sorbitrate 5mg"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Sublingual; maximum 3 tablets 15 minutes apart; go to emergency if pain persists"
+     }
+    ],
+    "dosageInstruction": [
+     {
+      "text": "1 tablet, as needed (SOS) for chest pain",
+      "additionalInstruction": [
+       {
+        "text": "Sublingual; maximum 3 tablets 15 minutes apart; go to emergency if pain persists"
+       }
+      ],
+      "asNeeded": true,
+      "route": {
+       "coding": [
+        {
+         "system": "http://snomed.info/sct",
+         "code": "37839007",
+         "display": "Sublingual"
+        }
+       ],
+       "text": "Sublingual"
+      }
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:bfa94cfa-e5d7-44a3-87ff-a61ee5222445",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "bfa94cfa-e5d7-44a3-87ff-a61ee5222445",
+    "status": "active",
+    "intent": "order",
+    "medication": {
+     "concept": {
+      "text": "Tab. Pantoprazole 40mg"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Replaces Gelusil"
+     }
+    ],
+    "dosageInstruction": [
+     {
+      "text": "1 tablet, once daily before breakfast, 2 weeks",
+      "additionalInstruction": [
+       {
+        "text": "Replaces Gelusil"
+       }
+      ],
+      "asNeeded": false,
+      "route": {
+       "coding": [
+        {
+         "system": "http://snomed.info/sct",
+         "code": "26643006",
+         "display": "Oral"
+        }
+       ],
+       "text": "Oral"
+      }
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:2bb109bf-4998-45de-945a-2a7af40f0bcd",
+   "resource": {
+    "resourceType": "MedicationStatement",
+    "id": "2bb109bf-4998-45de-945a-2a7af40f0bcd",
+    "status": "active",
+    "medication": {
+     "concept": {
+      "text": "Tab. Metformin 500mg"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "reason": [
+     {
+      "concept": {
+       "text": "Diabetes"
+      }
+     }
+    ],
+    "note": [
+     {
+      "text": "After food; adherence irregular"
+     }
+    ],
+    "dosage": [
+     {
+      "text": "1 tablet, twice daily, ongoing",
+      "additionalInstruction": [
+       {
+        "text": "After food; adherence irregular"
+       }
+      ],
+      "asNeeded": false
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:b88502e5-567f-452d-8d51-ce27c98ba3c7",
+   "resource": {
+    "resourceType": "MedicationStatement",
+    "id": "b88502e5-567f-452d-8d51-ce27c98ba3c7",
+    "status": "active",
+    "medication": {
+     "concept": {
+      "text": "Tab. Telma 40"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "reason": [
+     {
+      "concept": {
+       "text": "Hypertension"
+      }
+     }
+    ],
+    "dosage": [
+     {
+      "text": "1 tablet, once daily (morning), ongoing",
+      "asNeeded": false
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:848b0767-99fe-4b67-83e5-9d429bce250e",
+   "resource": {
+    "resourceType": "MedicationStatement",
+    "id": "848b0767-99fe-4b67-83e5-9d429bce250e",
+    "status": "active",
+    "medication": {
+     "concept": {
+      "text": "Tab. Ecosprin 75"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "note": [
+     {
+      "text": "Started by previous doctor"
+     }
+    ],
+    "dosage": [
+     {
+      "text": "1 tablet, once daily (night), ongoing",
+      "additionalInstruction": [
+       {
+        "text": "Started by previous doctor"
+       }
+      ],
+      "asNeeded": false
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5b741c1b-1ba5-45f7-85ee-4d6a93590566",
+   "resource": {
+    "resourceType": "MedicationStatement",
+    "id": "5b741c1b-1ba5-45f7-85ee-4d6a93590566",
+    "status": "active",
+    "medication": {
+     "concept": {
+      "text": "Cap. Pan D"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "reason": [
+     {
+      "concept": {
+       "text": "Acidity"
+      }
+     }
+    ],
+    "note": [
+     {
+      "text": "Morning, for acidity"
+     }
+    ],
+    "dosage": [
+     {
+      "text": "1 capsule, as needed, 2–3 times/week, ongoing",
+      "additionalInstruction": [
+       {
+        "text": "Morning, for acidity"
+       }
+      ],
+      "asNeeded": true
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:2a11ad07-5476-4969-aaf5-bced6dd897be",
+   "resource": {
+    "resourceType": "MedicationStatement",
+    "id": "2a11ad07-5476-4969-aaf5-bced6dd897be",
+    "status": "unknown",
+    "medication": {
+     "concept": {
+      "text": "Syp. Gelusil"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "note": [
+     {
+      "text": "Self-medication for presumed gas; no relief"
+     }
+    ],
+    "dosage": [
+     {
+      "text": "taken twice",
+      "additionalInstruction": [
+       {
+        "text": "Self-medication for presumed gas; no relief"
+       }
+      ],
+      "asNeeded": false
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:985a947f-8f91-4aba-9b84-3ac76569cab9",
+   "resource": {
+    "resourceType": "ServiceRequest",
+    "id": "985a947f-8f91-4aba-9b84-3ac76569cab9",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "108252007",
+        "display": "Laboratory procedure"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "concept": {
+      "text": "Treadmill test (TMT)"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Test on: Within this week; Urgency: this week; Decides need for coronary angiogram"
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7b966dbc-ea43-4409-8680-86c0016c4db0",
+   "resource": {
+    "resourceType": "ServiceRequest",
+    "id": "7b966dbc-ea43-4409-8680-86c0016c4db0",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "108252007",
+        "display": "Laboratory procedure"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "concept": {
+      "text": "2D echocardiography"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Test on: Within this week; Urgency: this week; Same day as TMT if possible"
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:4bf7e061-344d-4720-b4f0-6f2efd9ea0ad",
+   "resource": {
+    "resourceType": "ServiceRequest",
+    "id": "4bf7e061-344d-4720-b4f0-6f2efd9ea0ad",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "108252007",
+        "display": "Laboratory procedure"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "concept": {
+      "text": "Fasting and post-prandial blood sugar"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Test on: Tomorrow morning; Fasting"
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:903f5372-99b2-494f-a5f5-ae806f20ec42",
+   "resource": {
+    "resourceType": "ServiceRequest",
+    "id": "903f5372-99b2-494f-a5f5-ae806f20ec42",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "108252007",
+        "display": "Laboratory procedure"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "concept": {
+      "text": "Fasting lipid profile"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Test on: Tomorrow morning; Fasting"
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:23545e29-933d-4cb3-9da5-78d6e291b5ea",
+   "resource": {
+    "resourceType": "ServiceRequest",
+    "id": "23545e29-933d-4cb3-9da5-78d6e291b5ea",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "108252007",
+        "display": "Laboratory procedure"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "concept": {
+      "text": "Kidney function test"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Test on: Tomorrow morning; Fasting"
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dde3ace-20b0-414e-bb15-0c9f35069110",
+   "resource": {
+    "resourceType": "ServiceRequest",
+    "id": "9dde3ace-20b0-414e-bb15-0c9f35069110",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "108252007",
+        "display": "Laboratory procedure"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "concept": {
+      "text": "Urine microalbumin"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Test on: Tomorrow morning"
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:47eba423-e38e-4b1d-8aed-f92ded64aeec",
+   "resource": {
+    "resourceType": "ServiceRequest",
+    "id": "47eba423-e38e-4b1d-8aed-f92ded64aeec",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "108252007",
+        "display": "Laboratory procedure"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "concept": {
+      "text": "HbA1c"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Test on: After 3 months"
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:24bcbbf2-102f-4f5c-b4f5-cb09b58f0010",
+   "resource": {
+    "resourceType": "ServiceRequest",
+    "id": "24bcbbf2-102f-4f5c-b4f5-cb09b58f0010",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "387713003",
+        "display": "Surgical procedure"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "concept": {
+      "text": "Coronary angiogram"
+     }
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Timing: Conditional — after TMT and echo review; Only if TMT is positive; day-care procedure; cardiologist to advise"
+     }
+    ],
+    "requester": {
+     "reference": "Practitioner/d5948adb-0ad9-447c-b333-f22351c48367",
+     "display": "Dr. Sample"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ddd70693-e005-4e80-bb6d-1e33b9eac217",
+   "resource": {
+    "resourceType": "Procedure",
+    "id": "ddd70693-e005-4e80-bb6d-1e33b9eac217",
+    "status": "completed",
+    "code": {
+     "text": "12-lead ECG"
+    },
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "When: Today, in clinic; Sinus rhythm 86/min, ~1 mm ST depression V5–V6, no ST elevation; no complications"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f5261abb-9707-4876-a8ca-d4c87d5bdbcd",
+   "resource": {
+    "resourceType": "FamilyMemberHistory",
+    "id": "f5261abb-9707-4876-a8ca-d4c87d5bdbcd",
+    "status": "completed",
+    "patient": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "relationship": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+       "code": "FTH",
+       "display": "father"
+      }
+     ],
+     "text": "father"
+    },
+    "condition": [
+     {
+      "code": {
+       "text": "Myocardial infarction at 58; died of a second MI at 64"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a079b2b2-b76d-40fe-8d45-606faabb3316",
+   "resource": {
+    "resourceType": "FamilyMemberHistory",
+    "id": "a079b2b2-b76d-40fe-8d45-606faabb3316",
+    "status": "completed",
+    "patient": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "relationship": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+       "code": "MTH",
+       "display": "mother"
+      }
+     ],
+     "text": "mother"
+    },
+    "condition": [
+     {
+      "code": {
+       "text": "Diabetes, hypertension (alive)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:036a57fe-b31b-4638-bf26-b502a0da04d6",
+   "resource": {
+    "resourceType": "FamilyMemberHistory",
+    "id": "036a57fe-b31b-4638-bf26-b502a0da04d6",
+    "status": "completed",
+    "patient": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "relationship": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+       "code": "ELDER BROTHER",
+       "display": "Elder brother"
+      }
+     ],
+     "text": "Elder brother"
+    },
+    "condition": [
+     {
+      "code": {
+       "text": "Coronary angioplasty 2 years ago (age 56)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e2a3e81c-e419-4d4c-8bd2-ad54dda1e579",
+   "resource": {
+    "resourceType": "AllergyIntolerance",
+    "id": "e2a3e81c-e419-4d4c-8bd2-ad54dda1e579",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+       "code": "inactive",
+       "display": "Inactive"
+      }
+     ]
+    },
+    "category": [
+     "medication"
+    ],
+    "code": {
+     "text": "Penicillins"
+    },
+    "patient": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "note": [
+     {
+      "text": "Denied; Tolerated Augmentin previously"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:2a2e7475-2377-441c-9335-de1b50084027",
+   "resource": {
+    "resourceType": "Immunization",
+    "id": "2a2e7475-2377-441c-9335-de1b50084027",
+    "status": "completed",
+    "vaccineCode": {
+     "text": "COVID-19"
+    },
+    "patient": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "occurrenceString": "Unknown",
+    "note": [
+     {
+      "text": "two doses plus one booster (2022)"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:133e3ce1-c780-4fe7-aec9-5333f5397e1f",
+   "resource": {
+    "resourceType": "Immunization",
+    "id": "133e3ce1-c780-4fe7-aec9-5333f5397e1f",
+    "status": "completed",
+    "vaccineCode": {
+     "text": "Influenza"
+    },
+    "patient": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "occurrenceString": "Unknown",
+    "note": [
+     {
+      "text": "never taken"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:64221399-6d28-438f-a6fa-c633554ef84c",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "64221399-6d28-438f-a6fa-c633554ef84c",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Prescribed Vaccinations"
+     }
+    ],
+    "description": "Influenza vaccine (annual) — next week at the pharmacy",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Influenza vaccine (annual) — next week at the pharmacy"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8fcc0c6c-1cef-493e-b8e7-9e91067a16e0",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "8fcc0c6c-1cef-493e-b8e7-9e91067a16e0",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Prescribed Vaccinations"
+     }
+    ],
+    "description": "Pneumococcal vaccine — single dose at the next visit",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Pneumococcal vaccine — single dose at the next visit"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7e2f0d1b-281d-480a-8b2c-d5185420d480",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "7e2f0d1b-281d-480a-8b2c-d5185420d480",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Advice"
+     }
+    ],
+    "description": "No brisk stair climbing or heavy exertion until the TMT is done",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "No brisk stair climbing or heavy exertion until the TMT is done"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:c6a6a921-70ba-425e-b947-270887292a0f",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "c6a6a921-70ba-425e-b947-270887292a0f",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Advice"
+     }
+    ],
+    "description": "Chest pain at rest lasting > 15 minutes, with sweating, or not relieved by Sorbitrate: go to the nearest emergency immediately",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Chest pain at rest lasting > 15 minutes, with sweating, or not relieved by Sorbitrate: go to the nearest emergency immediately"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:1f9db5fb-fcca-4bd7-aa32-ed4b06bb0223",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "1f9db5fb-fcca-4bd7-aa32-ed4b06bb0223",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Advice"
+     }
+    ],
+    "description": "Do not restart smoking; no alcohol until the tests are complete",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Do not restart smoking; no alcohol until the tests are complete"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d86c3bfc-1e95-46e6-b1aa-3d68f2838db6",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "d86c3bfc-1e95-46e6-b1aa-3d68f2838db6",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Advice"
+     }
+    ],
+    "description": "Diet: reduce rice, avoid fried and outside food, no sweets, reduce salt, more vegetables",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Diet: reduce rice, avoid fried and outside food, no sweets, reduce salt, more vegetables"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:c1bac51b-70ed-41fd-9a14-e5493f8d5fda",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "c1bac51b-70ed-41fd-9a14-e5493f8d5fda",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Advice"
+     }
+    ],
+    "description": "After a normal TMT, start a slow 30-minute daily walk",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "After a normal TMT, start a slow 30-minute daily walk"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:3e0554da-487a-4fee-b0bd-10d0ef41eff7",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "3e0554da-487a-4fee-b0bd-10d0ef41eff7",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Advice"
+     }
+    ],
+    "description": "Take medicines exactly as prescribed; do not skip Metformin",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Take medicines exactly as prescribed; do not skip Metformin"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e9cf75b9-bad5-4fba-83f0-0b29e197a525",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "e9cf75b9-bad5-4fba-83f0-0b29e197a525",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Advice"
+     }
+    ],
+    "description": "Monitor blood pressure at home every morning and record it",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Monitor blood pressure at home every morning and record it"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:49353bd9-cdd6-49a8-b1f8-62600a29edcb",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "49353bd9-cdd6-49a8-b1f8-62600a29edcb",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Follow-up"
+     }
+    ],
+    "description": "Review in 1 week with TMT, 2D echo and blood reports",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Review in 1 week with TMT, 2D echo and blood reports"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9d0b4982-fbb0-4a9a-81a5-80f9b36231b6",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "9d0b4982-fbb0-4a9a-81a5-80f9b36231b6",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Follow-up"
+     }
+    ],
+    "description": "Earlier, immediately, if any chest pain occurs before then",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Earlier, immediately, if any chest pain occurs before then"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a17b623c-ba95-457c-a821-c319741099e4",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "a17b623c-ba95-457c-a821-c319741099e4",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Follow-up"
+     }
+    ],
+    "description": "Metoprolol dose review at 2 weeks; HbA1c at 3 months",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Metoprolol dose review at 2 weeks; HbA1c at 3 months"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:3081d194-3334-4491-b651-27b94777b286",
+   "resource": {
+    "resourceType": "CarePlan",
+    "id": "3081d194-3334-4491-b651-27b94777b286",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Referral"
+     }
+    ],
+    "description": "Referral: Dr. Test Cardiologist — Cardiology (same hospital) — TMT, 2D echo and opinion on coronary angiogram; referral note to accompany the patient",
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "activity": [
+     {
+      "progress": [
+       {
+        "text": "Referral: Dr. Test Cardiologist — Cardiology (same hospital) — TMT, 2D echo and opinion on coronary angiogram; referral note to accompany the patient"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f15c0b91-3c6b-40c7-8c93-e231ead5be2e",
+   "resource": {
+    "resourceType": "Communication",
+    "id": "f15c0b91-3c6b-40c7-8c93-e231ead5be2e",
+    "status": "completed",
+    "category": [
+     {
+      "text": "History of Present Illness"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "payload": [
+     {
+      "contentCodeableConcept": {
+       "text": "The patient reports a two-week history of central chest heaviness, precipitated by climbing three floors of stairs or walking briskly, radiating at times to the left arm as a dull ache, lasting four to five minutes and relieved by stopping and standing. One episode occurred at rest during an emotionally stressful phone call. Associated with exertional breathlessness and occasional sweating; no nausea or vomiting. He self-treated with Gelusil syrup twice without relief and took a single Dolo 650 for a headache. He denies fever, cough, giddiness or syncope; reports occasional palpitations."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a0ed2127-61ea-4597-9300-3f1bf5751b19",
+   "resource": {
+    "resourceType": "Communication",
+    "id": "a0ed2127-61ea-4597-9300-3f1bf5751b19",
+    "status": "completed",
+    "category": [
+     {
+      "text": "Review of Systems"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "payload": [
+     {
+      "contentCodeableConcept": {
+       "text": "Cardiovascular: exertional chest heaviness, occasional palpitations; no syncope, no pedal swelling"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3bd701e-30ad-410e-b73c-5964d2a29956",
+   "resource": {
+    "resourceType": "Communication",
+    "id": "d3bd701e-30ad-410e-b73c-5964d2a29956",
+    "status": "completed",
+    "category": [
+     {
+      "text": "Review of Systems"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "payload": [
+     {
+      "contentCodeableConcept": {
+       "text": "Respiratory: exertional breathlessness; no cough, no cold"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:b6077e64-65a6-4b0e-b5d3-3572f57d6f87",
+   "resource": {
+    "resourceType": "Communication",
+    "id": "b6077e64-65a6-4b0e-b5d3-3572f57d6f87",
+    "status": "completed",
+    "category": [
+     {
+      "text": "Review of Systems"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "payload": [
+     {
+      "contentCodeableConcept": {
+       "text": "General: no fever, no weight loss (gained 2–3 kg over the last year)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:27186cba-80d7-4181-a1d2-251b3681e51e",
+   "resource": {
+    "resourceType": "Communication",
+    "id": "27186cba-80d7-4181-a1d2-251b3681e51e",
+    "status": "completed",
+    "category": [
+     {
+      "text": "Review of Systems"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "payload": [
+     {
+      "contentCodeableConcept": {
+       "text": "Gastrointestinal: bowel movements normal; self-treated 'acidity'"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a10ba5c2-c265-4f79-a0d1-ad5dd7149ff2",
+   "resource": {
+    "resourceType": "Communication",
+    "id": "a10ba5c2-c265-4f79-a0d1-ad5dd7149ff2",
+    "status": "completed",
+    "category": [
+     {
+      "text": "Review of Systems"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "payload": [
+     {
+      "contentCodeableConcept": {
+       "text": "Genitourinary: nocturia once nightly; urine otherwise normal"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8335c044-2098-4a74-aedc-0740049e8098",
+   "resource": {
+    "resourceType": "Communication",
+    "id": "8335c044-2098-4a74-aedc-0740049e8098",
+    "status": "completed",
+    "category": [
+     {
+      "text": "Review of Systems"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "payload": [
+     {
+      "contentCodeableConcept": {
+       "text": "Neurological: no giddiness, never fainted"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:84726f12-9d74-44bf-a251-9978c8dbd944",
+   "resource": {
+    "resourceType": "Communication",
+    "id": "84726f12-9d74-44bf-a251-9978c8dbd944",
+    "status": "completed",
+    "category": [
+     {
+      "text": "Review of Systems"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "payload": [
+     {
+      "contentCodeableConcept": {
+       "text": "Sleep: adequate"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:39fb8bda-25e7-4943-9922-b6cfab6b2f44",
+   "resource": {
+    "resourceType": "Communication",
+    "id": "39fb8bda-25e7-4943-9922-b6cfab6b2f44",
+    "status": "completed",
+    "category": [
+     {
+      "text": "Notes"
+     }
+    ],
+    "subject": {
+     "reference": "Patient/9234aa30-dfc8-40e9-93b8-f28c408d04cc",
+     "display": "Test Patient"
+    },
+    "encounter": {
+     "reference": "Encounter/07e29017-2606-4c12-9311-66373c7b007c"
+    },
+    "payload": [
+     {
+      "contentCodeableConcept": {
+       "text": "Referral note to mention high occupational stress (accountant, ~10 h/day) and that the elder brother already has a coronary stent. Nocturia once nightly noted in the context of long-standing diabetes; urine microalbumin ordered to assess. The patient's presumed 'acidity' episodes are considered likely anginal in origin."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d5948adb-0ad9-447c-b333-f22351c48367",
+   "resource": {
+    "resourceType": "Practitioner",
+    "id": "d5948adb-0ad9-447c-b333-f22351c48367",
+    "name": [
+     {
+      "text": "Dr. Sample"
+     }
+    ],
+    "identifier": [
+     {
+      "type": {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+         "code": "MD",
+         "display": "Medical License number"
+        }
+       ]
+      },
+      "value": "doc-oid-sample"
+     }
+    ]
+   }
+  }
+ ],
+ "identifier": {
+  "system": "urn:agui:document-id",
+  "value": "00000000-0000-4000-8000-000000000001"
+ }
+}
