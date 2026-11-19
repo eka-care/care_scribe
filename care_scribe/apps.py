@@ -5,3 +5,6 @@ class CareScribeConfig(AppConfig):
     name = "care_scribe"
     verbose_name = "Care Scribe"
     default_auto_field = "django.db.models.BigAutoField"
+
+    def ready(self):
+        import care_scribe.extensions  # noqa: F401
