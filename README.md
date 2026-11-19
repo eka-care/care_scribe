@@ -61,3 +61,11 @@ Plug(
 ```
 
 Then run `python manage.py migrate`.
+
+## Facility HFR ID
+
+The scribe needs the facility's HFR ID to start a session. care_scribe adds it as the facility extension `care_scribe__facility`, `{"hfr_id": "IN2410013685"}`, returned in `extensions` on `GET /api/v1/facility/<id>/`. Set it with:
+
+```bash
+python manage.py set_facility_hfr_id <facility_external_id> IN2410013685
+```
